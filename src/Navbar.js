@@ -1,4 +1,4 @@
-export default function Navbar(){
+export default function Navbar({movies}){
     return(
         <nav className="nav-bar">
         <div className="logo">
@@ -11,7 +11,7 @@ export default function Navbar(){
           placeholder="Search movies..."
         />
         <p className="num-results">
-          Found <strong>X</strong> results
+          Found <strong>{movies?.length}</strong> results
         </p>
       </nav>
     )

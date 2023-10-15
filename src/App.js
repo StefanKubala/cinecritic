@@ -5,6 +5,7 @@ import Main from './Main';
 import MovieList from './MovieList';
 import Navbar from './Navbar';
 import WatchedSummary from './WatchedSummary';
+import WatchedMoviesList from './WatchedMoviesList';
 
 const tempMovieData = [
   {
@@ -54,11 +55,12 @@ const tempWatchedData = [
 ];
 
 export default function App() {
-  const [movies, setMovies] = useState(tempMovieData)
+  const [movies, setMovies] = useState(tempMovieData);
+  const [watched, setWatched] = useState(tempWatchedData)
   
   return(
     <>
-    <Navbar></Navbar>
+    <Navbar movies={movies}></Navbar>
     <Main>
       <Box>
       <MovieList movies={movies}></MovieList>
@@ -66,6 +68,7 @@ export default function App() {
 
       <Box>
         <WatchedSummary></WatchedSummary>
+        <WatchedMoviesList watched={watched}></WatchedMoviesList>
       </Box>
     </Main>
     </>
