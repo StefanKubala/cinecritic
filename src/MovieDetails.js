@@ -42,10 +42,18 @@ export default function MovieDetails({watched, selectedId, onCloseMovie, onAddWa
           const res = await fetch(`http://www.omdbapi.com/?apikey=3fd96616&i=${selectedId}`);
           const data = await res.json();
           setMovie(data)
-          console.log(data);
         }
         getMovieDetails()
       },[selectedId])
+
+      useEffect(function(){
+        if(!Title) return
+        document.title = `Movie | ${Title}`;
+
+        return function(){
+          document.title = "Cinecritic";
+        }
+      }, [Title])
 
     return(
         <div className="details">
