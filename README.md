@@ -1,3 +1,17 @@
+# Cinecritic
+This is web application to search movies from [OMDBAPI.com](http://www.omdbapi.com/). It allows users to find movies, view detailed information about them, and save rated movies to LocalStorage.
+
+## Features
+
+- **Movie Search:** Users can search for movies by title
+
+- **View Details:** After searching for a movie, users can view detailed information about the film, including its title, duration, actors, ratings, and description.
+
+- **LocalStorage Storage:** Users can rate and save movies to LocalStorage, allowing them to keep track of their favorite films.
+
+- **Fully Responsive Design:** The page is designed to adapt to various devices and screen sizes.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +82,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### Project inspired by [Jonas Schmedtmann](https://github.com/jonasschmedtmann) usePopcorn
