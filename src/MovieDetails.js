@@ -11,9 +11,9 @@ export default function MovieDetails({watched, selectedId, onCloseMovie, onAddWa
     const watchedUserRating = watched.find((movie)=>movie.imdbID === selectedId)?.userRating
 
     const {
-        Title: Title,
+        Title,
         Year: year,
-        Poster: Poster,
+        Poster,
         Runtime: runtime,
         imdbRating,
         Plot: plot,
@@ -51,10 +51,12 @@ export default function MovieDetails({watched, selectedId, onCloseMovie, onAddWa
       }, [onCloseMovie])   
 
       useEffect(function(){
+        setIsLoading(true)
         async function getMovieDetails(){
           const res = await fetch(`http://www.omdbapi.com/?apikey=3fd96616&i=${selectedId}`);
           const data = await res.json();
-          setMovie(data)
+          setMovie(data);
+          setIsLoading(false);
         }
         getMovieDetails()
       },[selectedId])

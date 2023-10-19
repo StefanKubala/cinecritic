@@ -23,7 +23,7 @@ const avgMovieTime = average(watched.map((movie)=>movie.runtime))
                   </p>
                   <p>
                     <span>⏳</span>
-                    <span>{avgMovieTime} min</span>
+                    <span>{avgMovieTime.toFixed(0)} min</span>
                   </p>
                 </div>
               </div>
