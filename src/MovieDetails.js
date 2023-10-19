@@ -38,6 +38,19 @@ export default function MovieDetails({watched, selectedId, onCloseMovie, onAddWa
       }
 
       useEffect(function(){
+        function callback(e){
+          if(e.code === "Escape"){
+            onCloseMovie();
+          }}
+
+        document.addEventListener("keydown", callback);
+
+        return function(){
+          document.removeEventListener("keydown", callback)
+        }
+      }, [onCloseMovie])   
+
+      useEffect(function(){
         async function getMovieDetails(){
           const res = await fetch(`http://www.omdbapi.com/?apikey=3fd96616&i=${selectedId}`);
           const data = await res.json();
