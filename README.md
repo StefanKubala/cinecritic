@@ -1,5 +1,9 @@
 # Cinecritic
-This is web application to search movies from [OMDBAPI.com](http://www.omdbapi.com/). It allows users to find movies, view detailed information about them, and save rated movies to LocalStorage.
+This web application uses the API from [OMDBAPI.com](http://www.omdbapi.com/) and allows users to search for movies by their title. When you enter a movie title, a list of movies matching the search title will be displayed. By clicking on a specific movie, the user can access information about the movie, including its IMDB rating, cast list, director, movie length, and a short description.
+
+A unique functionality of the app is the ability for the user to add their own rating to the movie. These ratings are stored in localstorage for each user. Rated movies are also stored in a separate list that shows all movies that the user has rated.
+
+This web application allows users to easily browse movies, get information about them and store their own ratings, enhancing their personal movie experience.
 
 ## Features
 
