@@ -5,6 +5,8 @@ A unique functionality of the app is the ability for the user to add their own r
 
 This web application allows users to easily browse movies, get information about them and store their own ratings, enhancing their personal movie experience.
 
+![Cinecritic desktop design](https://github.com/StefanKubala/cinecritic/blob/main/public/Screenshot.png "Cinecritic desktop design")
+
 ## Features
 
 - **Movie Search:** Users can search for movies by title
